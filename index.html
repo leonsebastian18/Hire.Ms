@@ -6,6 +6,8 @@
     <title>Applicant Tracking System</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="./Css/atsHire-Ms.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./Script/script.js" defer></script>
 </head>
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
 
@@ -36,10 +38,10 @@
         <button class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">Request a demonstration</button>
 
         <!-- Imágenes del ATS -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
-            <img src="./imagenes/Jobposting.png" alt="ATS interface" class="rounded-lg shadow-md w-[366px] h-[366px] md:w-[485.33px] md:h-[485.33px]">
-            <img src="./imagenes/Funcionallity.png" alt="Functionality" class="rounded-lg shadow-md w-[366px] h-[366px] md:w-[485.33px] md:h-[485.33px]">
-            <img src="./imagenes/Dashboard.png" alt="Dashboard" class="rounded-lg shadow-md w-[366px] h-[366px] md:w-[485.33px] md:h-[485.33px]">
+        <div class="grid grid-cols-1 md:grid-cols-1 gap-4 mt-8">
+            <div class="flex justify-center">
+                <img src="./imagenes/Index.png" alt="Demo_index" class="rounded-lg shadow-md w-[366px] h-[366px] md:w-[485.33px] md:h-[485.33px]">
+            </div>
         </div>
     </main>
 
@@ -59,6 +61,27 @@
                 <div class="p-4">
                     <h4 class="text-xl font-bold text-blue-600">Efficient Collaboration</h4>
                     <p class="text-gray-600 mt-2">Improve communication and teamwork within your HR department.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de estadistica -->
+    <section class="bg-white py-10 mt-10">
+        <div class="w-full px-4">
+            <h2 class="text-center text-xl md:text-2xl font-bold text-[#050F1F] mb-6">
+                Application Statistics
+            </h2>
+
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+                <!-- Gráfico de barras -->
+                <div class="bg-white rounded-lg shadow-md p-4 w-full max-w-xs md:max-w-sm aspect-square flex justify-center items-center">
+                    <canvas id="barChart" class="w-full h-full"></canvas>
+                </div>
+
+                <!-- Gráfico de pastel -->
+                <div class="bg-white rounded-lg shadow-md p-4 w-full max-w-xs md:max-w-sm aspect-square flex justify-center items-center">
+                    <canvas id="pieChart" class="w-full h-full"></canvas>
                 </div>
             </div>
         </div>
